@@ -1,5 +1,5 @@
 <html lang="{{ app()->getLocale() }}">
-<head>
+    <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +26,7 @@
 </head>
 <body>
 <div id="app">
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
 <div class="container">
 <a class="navbar-brand" href="{{ url('/') }}">
 Party Store
@@ -36,9 +36,9 @@ Party Store
 </button>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <!-- Left Side Of Navbar -->
-<ul class="navbar-nav mr-auto"></ul>
+<ul class="navbar-nav ml-auto"></ul>
 <!-- Right Side Of Navbar -->
-<ul class="navbar-nav ml-auto">
+<ul class="navbar-nav mr-auto ms-auto">
 <!-- Authentication Links -->
 @guest
 <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
@@ -46,7 +46,7 @@ Party Store
 @else
 <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
 <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
-<li><a class="nav-link" href="{{ route('products.index') }}">Manage Product</a></li>
+<li><a class="nav-link" href="{{ route('product.index') }}">Manage Product</a></li>
 
 <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
