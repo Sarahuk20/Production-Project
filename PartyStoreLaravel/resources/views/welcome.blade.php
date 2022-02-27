@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Weclome to my laravel application.
+                    
                     <br>
 Welcome to my Party Store.....!
             </div>

@@ -39,6 +39,7 @@ Party Store
 <ul class="navbar-nav ml-auto"></ul>
 <!-- Right Side Of Navbar -->
 <ul class="navbar-nav mr-auto ms-auto">
+    
 <!-- Authentication Links -->
 @guest
 <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>

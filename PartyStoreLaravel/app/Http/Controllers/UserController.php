@@ -44,7 +44,8 @@ return view('users.create',compact('roles'));
 public function store(Request $request)
 {
 $this->validate($request, [
-'name' => 'required',
+'First_Name' => 'required',
+'Last_Name' => 'required',
 'email' => 'required|email|unique:users,email',
 'password' => 'required|same:confirm-password',
 'roles' => 'required'
@@ -90,7 +91,8 @@ return view('users.edit',compact('user','roles','userRole'));
 public function update(Request $request, $id)
 {
 $this->validate($request, [
-'name' => 'required',
+'First_Name' => 'required',
+'Last_Name' => 'required',
 'email' => 'required|email|unique:users,email,'.$id,
 'password' => 'same:confirm-password',
 'roles' => 'required'

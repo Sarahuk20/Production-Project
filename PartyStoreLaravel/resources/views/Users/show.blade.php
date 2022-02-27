@@ -13,10 +13,40 @@
 <div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12">
 <div class="form-group">
-<strong>Name:</strong>
-{{ $user->name }}
+<strong>First Name:</strong>
+{{ $user->First_Name }}
 </div>
 </div>
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+<div class="form-group">
+<strong>Last Name:</strong>
+{{ $user->Last_Name }}
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+<div class="form-group">
+<strong>Address:</strong>
+{{ $user->Address }}
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+<div class="form-group">
+<strong>Postcode:</strong>
+{{ $user->Postcode }}
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+<div class="form-group">
+<strong>Contact Number:</strong>
+{{ $user->Telephone_Number }}
+</div>
+</div>
+
+
 <div class="col-xs-12 col-sm-12 col-md-12">
 <div class="form-group">
 <strong>Email:</strong>
@@ -26,11 +56,9 @@
 <div class="col-xs-12 col-sm-12 col-md-12">
 <div class="form-group">
 <strong>Roles:</strong>
-@if(!empty($user->getRoleNames()))
-@foreach($user->getRoleNames() as $v)
-<label class="badge badge-success">{{ $v }}</label>
+@foreach($user->roles as $u )
+    <span> {{ $u->name }}</span>
 @endforeach
-@endif
 </div>
 </div>
 </div>
