@@ -6,6 +6,7 @@
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <title>{{ config('app.name', 'Party Store') }}</title>
+
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
 <!-- Fonts -->
@@ -13,6 +14,8 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="{{ asset('css/PartyStyle.css') }}" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
   
@@ -29,7 +32,9 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
 <div class="container">
 <a class="navbar-brand" href="{{ url('/') }}">
-Party Store
+
+<img class="navImg" src="images/logo_white.jpg" alt="">
+
 </a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
@@ -39,7 +44,7 @@ Party Store
 <ul class="navbar-nav ml-auto"></ul>
 <!-- Right Side Of Navbar -->
 <ul class="navbar-nav mr-auto ms-auto">
-    
+<li><a class="nav-link" href="{{ url('/') }}"><i class="fa fa-home"></i></a></li>
 <!-- Authentication Links -->
 @guest
 <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
@@ -72,12 +77,48 @@ Party Store
 </div>
 </div>
 </nav>
+
+@section('banner')
+           
+        @show
+        
 <main class="py-4">
 <div class="container">
 @yield('content')
 </div>
+
+
+
 </main>
 </div>
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="links">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">menu</a>
+        <a href="#">products</a>
+        <a href="#">review</a>
+        <a href="#">contact</a>
+        <a href="#">blogs</a>
+    </div>
+
+    <div class="credit">created by <span>mr. web designer</span> | all rights reserved</div>
+
+</section>
+
+<!-- footer section ends -->
 
 @yield('scripts')
 
