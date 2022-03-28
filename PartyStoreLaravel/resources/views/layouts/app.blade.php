@@ -51,7 +51,21 @@
 <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
 @else
 <li><a class="nav-link" href="{{ route('users.index') }}">Users</a></li>
+@php
+$isadminuser=false;
+@endphp
+
+@foreach(auth()->user()->roles as $r)
+        @if($r->id == 1)
+            @php
+                $isadminuser=true;
+            @endphp
+            @break
+        @endif
+@endforeach
+@if($isadminuser == true)
 <li><a class="nav-link" href="{{ route('roles.index') }}">Roles</a></li>
+@endif
 <li><a class="nav-link" href="{{ route('product.index') }}">Products</a></li>
 <li>
 

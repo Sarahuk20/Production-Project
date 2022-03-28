@@ -19,9 +19,24 @@ class UserController extends Controller
 */
 public function index(Request $request)
 {
-$data = User::orderBy('id','DESC')->paginate(5);
+    
+    $adminuser=false;
+    foreach(auth()->user()->roles as $r){
+        if($r->id == 1){
+            $adminuser=true;
+            break;
+        }
+    }
+    if($adminuser==true){
+        $data = User::orderBy('id','DESC')->paginate(5);
 return view('users.index',compact('data'))
 ->with('i', ($request->input('page', 1) - 1) * 5);
+    }else{
+        $userid=auth()->user()->id;
+$data = User::where('id' , '=' , $userid)->orderBy('id','DESC')->paginate(5);
+return view('users.index',compact('data'))
+->with('i', ($request->input('page', 1) - 1) * 5);
+    }
 }
 /**
 * Show the form for creating a new resource.
