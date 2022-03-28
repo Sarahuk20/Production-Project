@@ -15,12 +15,12 @@ class Product extends Model
     protected $casts = [
         'Price' => 'float',       
         'Stock' => 'integer',
-        'ProductTypeID'=>'integer'
+        'Party_Sub_Type_ID'=>'integer'
     ];
 
     protected $fillable = [
-        'ProductTypeID',
-        'ProductName',
+        'Party_Sub_Type_ID',
+        'Name',
         'Firstname',
         'Surname',
         'Description',

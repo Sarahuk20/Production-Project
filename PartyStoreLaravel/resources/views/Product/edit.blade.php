@@ -32,11 +32,20 @@
 <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Product Type:</strong>
-                    <select name="ProductTypeID" class="form-control">
+                    <select name="Party_Sub_Type_ID" class="form-control">
                     <option value="">--- Select Product Type ---</option>                  
-                    <option value="1" @if($product->ProductTypeID==1) selected='selected' @endif >Birthday Party</option>
-                    <option value="2" @if($product->ProductTypeID==2) selected='selected' @endif>Easter Party</option>
-                    <option value="3" @if($product->ProductTypeID==3) selected='selected' @endif>BabyShower Party</option>
+                    
+                    <option value="27" @if($product->Party_Sub_Type_ID==27) selected='selected' @endif>Childeren-Baby Shower</option>
+                    <option value="36" @if($product->Party_Sub_Type_ID==36) selected='selected' @endif>Adult-Halloween</option>
+                    <option value="45" @if($product->Party_Sub_Type_ID==45) selected='selected' @endif>Teenagers-Brithday</option>
+
+                    <option value="54" @if($product->Party_Sub_Type_ID==54) selected='selected' @endif>Childeren-Milestone</option>
+                    <option value="63" @if($product->Party_Sub_Type_ID==63) selected='selected' @endif>Teenagers-Christmas</option>
+                    <option value="72" @if($product->Party_Sub_Type_ID==72) selected='selected' @endif>Childeren-Easter</option>
+                    <option value="81" @if($product->Party_Sub_Type_ID==81) selected='selected' @endif>Adult-Baby Shower</option>
+                    <option value="90" @if($product->Party_Sub_Type_ID==90) selected='selected' @endif>Teenagers-Halloween</option>
+                    <option value="99" @if($product->Party_Sub_Type_ID==99) selected='selected' @endif>Childeren-Brithday</option>
+
 
                 </select>
                 </div>
@@ -45,7 +54,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Product Name/Title:</strong>
-                    <input type="text" name="ProductName" value="{{ $product->ProductName }}" class="form-control" placeholder="Product Name/ Title">
+                    <input type="text" name="Name" value="{{ $product->Name }}" class="form-control" placeholder="Product Name/ Title">
                 </div>
             </div>
 

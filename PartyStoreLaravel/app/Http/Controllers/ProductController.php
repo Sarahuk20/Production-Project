@@ -48,8 +48,8 @@ return view('product.create');
 public function store(Request $request)
 {
 request()->validate([
-    'ProductName' => 'required',
-    'ProductTypeID' => 'required',
+    'Name' => 'required',
+    'Party_Sub_Type_ID' => 'required',
     'Firstname' => 'required',
     'Surname' => 'required'
 ]);
@@ -87,8 +87,8 @@ return view('product.edit',compact('product'));
 public function update(Request $request, Product $product)
 {
 request()->validate([
-    'ProductName' => 'required',
-    'ProductTypeID' => 'required',
+    'Name' => 'required',
+    'Party_Sub_Type_ID' => 'required',
     'Firstname' => 'required',
     'Surname' => 'required'
 ]);
@@ -108,4 +108,16 @@ $product->delete();
 return redirect()->route('product.index')
 ->with('success','Product deleted successfully');
 }
+/**
+* Display the specified resource.
+*
+* @param  \App\Product  $product
+* @return \Illuminate\Http\Response
+*/
+public function buy(Product $product)
+{
+return view('product.buy',compact('product'));
 }
+}
+
+

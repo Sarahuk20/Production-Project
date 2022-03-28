@@ -33,12 +33,19 @@
 <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Product Type:</strong>
-                    <select name="ProductTypeID" class="form-control">
+                    <select name="Party_Sub_Type_ID" class="form-control">
                     <option value="">--- Select Product Type ---</option>
                    
-                    <option value="1">Birthday Party</option>
-                    <option value="2">Easter Party</option>
-                    <option value="3">BabyShower Party</option>
+                    <option value="27">Childeren-Baby Shower</option>
+                    <option value="36">Adult-Halloween</option>
+                    <option value="45">Teenagers-Brithday</option>
+
+                    <option value="54">Childeren-Milestone</option>
+                    <option value="63">Teenagers-Christmas</option>
+                    <option value="72">Childeren-Easter</option>
+                    <option value="81">Adult-Baby Shower</option>
+                    <option value="90">Teenagers-Halloween</option>
+                    <option value="99">Childeren-Brithday</option>
 
                 </select>
                 </div>
@@ -48,7 +55,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Product Name/Title:</strong>
-                    <input type="text" name="ProductName" class="form-control" placeholder="Product Name/ Title">
+                    <input type="text" name="Name" class="form-control" placeholder="Product Name/ Title">
                 </div>
             </div>
 

@@ -21,14 +21,14 @@
 <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Product Type: </strong>
-                    {{ $product->ProductTypeID }}                
+                    {{ $product->Party_Sub_Type_ID }}                
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Product Name/Title: </strong>
-                  {{ $product->ProductName }}
+                  {{ $product->Name }}
                 </div>
             </div>
 
@@ -72,19 +72,8 @@
                     <strong>Filname: </strong>
                     {{ $product->file_name }}
                 </div>
-            </div>            
- <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Date Created: </strong>
-                {{ date_format($product->created_at, 'jS M Y') }}
-            </div>
-        </div>
- <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Date Updated: </strong>
-                {{ date_format($product->updated_at, 'jS M Y') }}
-            </div>
-        </div>
-
+            </div>   
+            
+            
 </div>
 @endsection

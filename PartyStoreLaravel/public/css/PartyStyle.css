@@ -598,6 +598,9 @@ section{
     color:var(--main-color);
 }
 */
+.btn-danger{
+    padding: .9rem 3rem;
+}
 
 
 
