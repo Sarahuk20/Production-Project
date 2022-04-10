@@ -6,6 +6,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PayPalController;
 use App\Http\Controllers\CartController;
+
+use App\Http\Controllers\Party_OrderController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +32,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('product', ProductController::class);
+
+    Route::resource('Party_Order', Party_OrderController::class);
+
 });
 
 Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
@@ -48,4 +54,6 @@ Route::get('create-transaction', [PayPalController::class, 'createTransaction'])
 Route::get('process-transaction', [CartController::class, 'processTransaction'])->name('processTransaction');
 Route::get('success-transaction', [CartController::class, 'successTransaction'])->name('successTransaction');
 Route::get('cancel-transaction', [CartController::class, 'cancelTransaction'])->name('cancelTransaction');
+Route::get('create-transaction', [PayPalController::class, 'createTransaction'])->name('createTransaction');
+
 

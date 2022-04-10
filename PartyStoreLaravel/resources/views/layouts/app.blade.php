@@ -69,6 +69,7 @@ $isadminuser=false;
 <li><a class="nav-link" href="{{ route('roles.index') }}">Roles</a></li>
 @endif
 <li><a class="nav-link" href="{{ route('product.index') }}">Products</a></li>
+<li><a class="nav-link" href="{{ route('Party_Order.index') }}">Orders</a></li>
 <li>
 
 <a href="{{ route('cart.list') }}" class="nav-link flex items-center">
