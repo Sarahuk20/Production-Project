@@ -55,5 +55,3 @@ Route::get('process-transaction', [CartController::class, 'processTransaction'])
 Route::get('success-transaction', [CartController::class, 'successTransaction'])->name('successTransaction');
 Route::get('cancel-transaction', [CartController::class, 'cancelTransaction'])->name('cancelTransaction');
 Route::get('create-transaction', [PayPalController::class, 'createTransaction'])->name('createTransaction');
-
-

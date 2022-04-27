@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Kyslik\ColumnSortable\Sortable;
 
 class Product extends Model
 {
     use HasFactory;
+    use Sortable;
 
     protected $table = 'product';
     public $timestamps = true;
@@ -28,4 +30,14 @@ class Product extends Model
         'Stock',
         'file_name'
     ];
+
+	public $sortable = ['Party_Sub_Type_ID','Name',
+    'Firstname',
+    'Surname',
+    'Description',
+    'Price',
+    'Stock',
+    'file_name'];
+
+
 }

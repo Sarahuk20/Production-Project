@@ -47,6 +47,8 @@
 <!-- Right Side Of Navbar -->
 <ul class="navbar-nav mr-auto ms-auto">
 <li><a class="nav-link" href="{{ url('/') }}"><i class="fa fa-home"></i></a></li>
+
+
 <!-- Authentication Links -->
 @guest
 <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>

@@ -26,11 +26,11 @@
 <tr>
 
 <th>Index</th>
-            <th>Product Name</th>
-            <th>Description</th>
-            <th>Product Type</th>
-            <th>Cost</th>          
-            <th>ownername</th>
+            <th>@sortablelink('Name','Product Name')</th>
+            <th>@sortablelink('Description','Description')</th>
+            <th>@sortablelink('Party_Sub_Type_ID','Product Type')</th>
+            <th>@sortablelink('Price','Cost')</th>          
+            <th>@sortablelink('Firstname','ownername')</th>
             <th width="280px">Action</th>
 
 </tr>
@@ -78,6 +78,6 @@
 </tr>
 @endforeach
 </table>
-{!! $products->links() !!}
+{!! $products->appends(\Request::except('page'))->render() !!}
 
 @endsection

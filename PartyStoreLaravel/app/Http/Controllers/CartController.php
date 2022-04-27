@@ -159,11 +159,13 @@ $payName=$payer['name'];
 $transaction->First_Name =$payName['given_name'];
 $transaction->Last_Name =$payName['surname'];
 $unitPr= $response['purchase_units'][0];
+
 //shipping
 $shipping= $unitPr['shipping'];
 $address= $shipping['address'];
 $transaction->Address_Street = $address['address_line_1'];
 $transaction->Address_City = $address['admin_area_2'];
+
 //$transaction->Address_State = $address['state'];
 $transaction->Address_Zip = $address['postal_code'];
 $transaction->Address_Country = $address['country_code'];

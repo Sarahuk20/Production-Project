@@ -109,6 +109,7 @@ $role->syncPermissions($request->input('permission'));
 return redirect()->route('roles.index')
 ->with('success','Role updated successfully');
 }
+
 /**
 * Remove the specified resource from storage.
 *

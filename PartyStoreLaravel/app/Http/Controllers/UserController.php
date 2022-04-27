@@ -96,6 +96,7 @@ $roles = Role::pluck('name','name')->all();
 $userRole = $user->roles->pluck('name','name')->all();
 return view('users.edit',compact('user','roles','userRole'));
 }
+
 /**
 * Update the specified resource in storage.
 *
@@ -112,12 +113,14 @@ $this->validate($request, [
 'password' => 'same:confirm-password',
 'roles' => 'required'
 ]);
+
 $input = $request->all();
 if(!empty($input['password'])){ 
 $input['password'] = Hash::make($input['password']);
 }else{
 $input = Arr::except($input,array('password'));    
 }
+
 $user = User::find($id);
 $user->update($input);
 DB::table('model_has_roles')->where('model_id',$id)->delete();
@@ -125,6 +128,7 @@ $user->assignRole($request->input('roles'));
 return redirect()->route('users.index')
 ->with('success','User updated successfully');
 }
+
 /**
 * Remove the specified resource from storage.
 *
