@@ -22,6 +22,17 @@
 <p>{{ $message }}</p>
 </div>
 @endif
+
+<form class="form-inline" method="GET">
+  <div class="form-group col-sm-4">
+    <label for="filter" class="col-sm-4 col-form-label">Filter</label>
+    <input type="text" class="form-control col-sm-4" id="filter" name="filter" placeholder="Product name" value="{{$filter}}">
+ 
+</div>
+
+<button type="submit" class="btn btn-default filter col-2">Search</button> 
+</form>
+
 <table class="table table-bordered">
 <tr>
 

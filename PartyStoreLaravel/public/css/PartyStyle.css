@@ -605,7 +605,11 @@ section{
 max-height: 20px;
 }
 
-
+.filter{
+    padding: 10px;
+line-height: .50;
+margin-bottom: 10px;
+}
 
 
 

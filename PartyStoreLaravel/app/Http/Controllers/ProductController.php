@@ -24,10 +24,20 @@ $this->middleware('permission:product-delete', ['only' => ['destroy']]);
 *
 * @return \Illuminate\Http\Response
 */
-public function index()
+public function index(Request $request)
 {
-$products = Product::sortable()->paginate(5);
-return view('product.index',compact('products'));
+    $filter = $request->query('filter');
+
+    if (!empty($filter)) {
+        $products = Product::sortable()
+            ->where('product.Name', 'like', '%'.$filter.'%')
+            ->paginate(5);
+    } else {
+        $products = Product::sortable()->paginate(5);
+    }
+    
+return view('product.index',compact('products'))
+->with('filter', $filter);
 
 //->with('i', (request()->input('page', 1) - 1) * 5);
 }
